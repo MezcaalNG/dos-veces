@@ -37,8 +37,8 @@ nav {
 }
 .navbar-left ul li a:hover,
 .navbar-right ul li a:hover {
-	border: 1px solid var(--hospital-green);
-	color: var(--hospital-green);
+	border: 1px solid var(--lavanda);
+	color: var(--lavanda);
 }
 .navbar-email {
 	color: var(--very-light-pink);
@@ -51,7 +51,7 @@ nav {
 .navbar-shopping-cart div {
 	width: 16px;
 	height: 16px;
-	background-color: var(--hospital-green);
+	background-color: var(--lavanda);
 	border-radius: 50%;
 	font-size: var(--sm);
 	font-weight: bold;

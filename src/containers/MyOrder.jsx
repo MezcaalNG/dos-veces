@@ -28,9 +28,11 @@ const MyOrder = () => {
         <p className="title">Mi Orden</p>
       </div>
       <div className="my-order-content">
+        <div className="my-order-content-items">
         {state.cart.map((product, index) => (
           <OrderItem product={product} key={index} indexValue={index} />
         ))}
+        </div>
         <div className="order">
           <p>
             <span>Total</span>
