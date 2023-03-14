@@ -23,7 +23,7 @@ const Login = () => {
         <img src={logo} alt="logo" className="logo" />
         <form action="/" className="form" ref={form}>
           <label htmlFor="email" className="label">
-            Email address
+            Email
           </label>
           <input
             type="text"
@@ -47,9 +47,9 @@ const Login = () => {
           >
             Login
           </button>
-          <a href="/">Forgot my password</a>
+          <a href="/">Olvide mi password</a>
         </form>
-        <button className="secondary-button signup-button">Sign up</button>
+        <button className="secondary-button signup-button">Registrarse</button>
       </div>
     </div>
   );

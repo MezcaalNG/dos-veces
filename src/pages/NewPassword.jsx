@@ -7,8 +7,8 @@ const NewPassword = () => {
 		<div className="NewPassword">
 			<div className="NewPassword-container">
 				<img src={logo} alt="logo" className="logo" />
-				<h1 className="title">Create a new password</h1>
-				<p className="subtitle">Enter a new passwrd for yue account</p>
+				<h1 className="title">crear un nuevo password</h1>
+				<p className="subtitle">Ingresa un nuevo password para tu cuenta</p>
 				<form action="/" className="form">
 					<label for="password" className="label">Password</label>
 					<input type="password" id="password" placeholder="*********" className="input input-password" />

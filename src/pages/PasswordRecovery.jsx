@@ -7,10 +7,10 @@ const PasswordRecovery = () => {
 		<div className="PasswordRecovery">
 			<div className="PasswordRecovery-container">
 				<img src={logo} alt="logo" className="logo" />
-				<h1 className="title">Password recovery</h1>
-				<p className="subtitle">Inform the email address used to create your account</p>
+				<h1 className="title">Recuperacion de Password</h1>
+				<p className="subtitle">Ingresa tu correo para recuperar tu password</p>
 				<form action="/" className="form">
-					<label htmlFor="email" className="label">Email address</label>
+					<label htmlFor="email" className="label">Email</label>
 					<input type="text" id="email" className="input input-email" />
 					<input type="submit" value="Confirm" className="primary-button login-button" />
 				</form>
