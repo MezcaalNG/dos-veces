@@ -1,10 +1,18 @@
 import React from 'react';
+import {useNavigate} from 'react-router-dom';
 import '@styles/SendEmail.scss';
 import logo from '@logos/logo_yard_sale.svg';
 import email from '@icons/email.svg';
 
 
 const SendEmail = () => {
+	const navigate = useNavigate();
+	const navigateNewPassword = () => {
+		navigate('/new-password');
+	};
+	const navigateLogin = () => {
+		navigate('/login');
+	};
 	return (
 		<div className="SendEmail">
 			<div className="form-container">
@@ -14,10 +22,10 @@ const SendEmail = () => {
 				<div className="email-image">
 					<img src={email} alt="email" />
 				</div>
-				<button className="primary-button login-button">Login</button>
+				<button onClick={navigateLogin} className="primary-button login-button">Login</button>
 				<p className="resend">
 					<span>No recibi el email?</span>
-					<a href="/">Reenviar</a>
+					<a onClick={navigateNewPassword}>Reenviar</a>
 				</p>
 			</div>
 		</div>

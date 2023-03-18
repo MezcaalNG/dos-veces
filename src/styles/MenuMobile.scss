@@ -1,6 +1,6 @@
 @import 'vars';
 
-.Menu {
+.MenuMobile {
 	width: 150px;
 	height: auto;
 	border: 1px solid var(--very-light-pink);
@@ -8,47 +8,47 @@
 	padding: 20px 20px 0 20px;
 	position: absolute;
 	top: 60px;
-	right: 50px;
+	//left: 50px;
 	background: var(--white);
 }
-.Menu ul {
+.MenuMobile ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
-.Menu ul li {
+.MenuMobile ul li {
 	text-align: end;
 }
-.Menu ul li:nth-child(1),
-.Menu ul li:nth-child(2) {
+.MenuMobile ul li:nth-child(1),
+.MenuMobile ul li:nth-child(2) {
 	font-weight: bold;
 }
-.Menu ul li:last-child {
+.MenuMobile ul li:last-child {
 	padding-top: 20px;
 	border-top: 1px solid var(--very-light-pink);
 }
-.Menu ul li:last-child a {
+.MenuMobile ul li:last-child a {
 	color: var(--lavanda);
 	font-size: var(--sm);
 }
-.Menu ul li a {
+.MenuMobile ul li a {
 	color: var(--back);
 	text-decoration: none;
 	margin-bottom: 20px;
 	display: inline-block;
 }
 
-@media (max-width: 640px) {
-	.Menu {
+@media (min-width: 641px) {
+	.MenuMobile {
 		display: none;
 	}
-	.Menu ul{
+	.MenuMobile ul{
 		display: none;
 	}
-	.Menu ul li{
+	.MenuMobile ul li{
 		display: none;
 	}
-	.Menu ul li a{
+	.MenuMobile ul li a{
 		display: none;
 	}
 	

@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import {useNavigate} from 'react-router-dom';
 import '@styles/Login.scss';
 import logo from '@logos/logo_yard_sale.svg';
 
@@ -16,6 +17,17 @@ const Login = () => {
 
 		console.log(data);
 	}
+  const navigate = useNavigate();
+
+	const navigateLogin = () => {
+		navigate('/');
+	};
+  const navigatePassRecovery = () => {
+		navigate('/password-recovery');
+	};
+  const navigateSignup = () => {
+		navigate('/signup');
+	};
 
 	return (
     <div className="Login">
@@ -28,7 +40,7 @@ const Login = () => {
           <input
             type="text"
             name="email"
-            placeholder="platzi@example.com"
+            placeholder="user@email.com"
             className="input input-email"
           />
           <label htmlFor="password" className="label">
@@ -43,13 +55,13 @@ const Login = () => {
           <button
             type="submit"
             className="primary-button login-button"
-            onClick={handleSubmit}
+            onClick={navigateLogin}
           >
             Login
           </button>
-          <a href="/">Olvide mi password</a>
+          <a onClick={navigatePassRecovery}>Olvide mi password</a>
         </form>
-        <button className="secondary-button signup-button">Registrarse</button>
+        <button onClick={navigateSignup} className="secondary-button signup-button">Registrarse</button>
       </div>
     </div>
   );

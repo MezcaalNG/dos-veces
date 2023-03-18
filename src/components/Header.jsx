@@ -1,8 +1,9 @@
 import React, { useState, useContext } from "react";
 import "@styles/Header.scss";
 import Menu from "@components/Menu";
+import MenuMobile from "@components/MenuMobile";
 import menu from "@icons/icon_menu.svg";
-import logo from "@logos/logo_yard_sale.svg";
+import logoGamatoto from "@logos/gamatoto.webp"
 import AppContext from "@context/AppContext";
 import MyOrder from "@containers/MyOrder";
 import shoppingCart from "@icons/icon_shopping_cart.svg";
@@ -10,17 +11,22 @@ import shoppingCart from "@icons/icon_shopping_cart.svg";
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   const [toggleOrders, setToggleOrders] = useState(false);
+  const [toggleMobile, setToggleMobile] = useState(false);
   const { state } = useContext(AppContext);
 
   const handleToggle = () => {
     setToggle(!toggle);
   };
+  const handleToggleMobile = () => {
+    console.log('asd');
+    setToggleMobile(!toggleMobile);
+  };
 
   return (
     <nav>
-      <img src={menu} alt="menu" className="menu" />
+      <img src={menu} alt="menu" className="menu" onClick={handleToggleMobile} />
       <div className="navbar-left">
-        <img src={logo} alt="logo" className="nav-logo" />
+        <img src={logoGamatoto} alt="logo" className="nav-logo" />
         <ul>
           <li>
             <a href="/">Todo</a>
@@ -58,6 +64,7 @@ const Header = () => {
       </div>
       {toggle && <Menu />}
       {toggleOrders && <MyOrder />}
+      {toggleMobile && <MenuMobile />}
     </nav>
   );
 };

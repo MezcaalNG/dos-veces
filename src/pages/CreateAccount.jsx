@@ -1,21 +1,27 @@
 import React from 'react';
+import {useNavigate} from 'react-router-dom';
 import '@styles/CreateAccount.scss';
 
 const CreateAccount = () => {
+	const navigate = useNavigate();
+
+	const navigateLogin = () => {
+		navigate('/login');
+	};
 	return (
 		<div className="CreateAccount">
 			<div className="CreateAccount-container">
-				<h1 className="title">My account</h1>
-				<form action="/" className="form">
+				<h1 className="title">Mi Cuenta</h1>
+				<form className="form">
 					<div>
-						<label for="name" className="label">Nombre</label>
-						<input type="text" id="name" placeholder="Teff" className="input input-name" />
-						<label for="email" className="label">Email</label>
-						<input type="text" id="email" placeholder="platzi@example.com" className="input input-email" />
-						<label for="password" className="label">Password</label>
-						<input type="password" id="password" placeholder="*********" className="input input-password" />
+						<label htmlFor="name" className="label">Nombre</label>
+						<input htmlFor="text" id="name" placeholder="Gamatoto" className="input input-name" />
+						<label htmlFor="email" className="label">Email</label>
+						<input htmlFor="text" id="email" placeholder="user@email.com" className="input input-email" />
+						<label htmlFor="password" className="label">Password</label>
+						<input htmlFor="password" id="password" placeholder="*********" className="input input-password" />
 					</div>
-					<input type="submit" value="Create" className="primary-button login-button" />
+					<button onClick={navigateLogin} className="primary-button login-button" >Crear</button>
 				</form>
 			</div>
 		</div>

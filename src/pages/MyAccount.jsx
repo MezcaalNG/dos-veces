@@ -5,7 +5,7 @@ const MyAccount = () => {
 	return (
 		<div className="MyAccount">
 			<div className="MyAccount-container">
-				<h1 className="title">My account</h1>
+				<h1 className="title">Mi Cuenta</h1>
 				<form action="/" className="form">
 					<div>
 						<label for="name" className="label">Nombre</label>
@@ -15,7 +15,7 @@ const MyAccount = () => {
 						<label for="password" className="label">Password</label>
 						<p className="value">*********</p>
 					</div>
-					<input type="submit" value="Edit" className="secondary-button login-button" />
+					<input type="submit" value="Editar" className="secondary-button login-button" />
 				</form>
 			</div>
 		</div>

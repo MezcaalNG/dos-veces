@@ -8,7 +8,7 @@ const Orders = () => {
 			<div className="Orders-container">
 				<h1 className="title">Mis Ordenes</h1>
 				<div className="Orders-content">
-					<OrderItem />
+					
 				</div>
 			</div>
 		</div>
